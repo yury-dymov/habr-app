@@ -2,22 +2,29 @@ import React, { PropTypes, Component } from 'react';
 
 import './HelloWorldPage.css';
 
-export default class extends Component {
-  static propTypes = {
-    initialName: PropTypes.string
+const propTypes = {
+  initialName: PropTypes.string
+};
+
+const defaultProps = {
+  initialName: 'Аноним'
+};
+
+class HelloWorldPage extends Component {
+  constructor(props) {
+    super(props);
+
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.renderGreetingWidget = this.renderGreetingWidget.bind(this);
+
+    this.state = {
+      name:            this.props.initialName,
+      touched:         false,
+      greetingWidget:  () => null
+    };
   }
 
-  static defaultProps = {
-    initialName: 'Аноним'
-  };
-
-  state = {
-    name:            this.props.initialName,
-    touched:         false,
-    greetingWidget:  () => null
-  };
-
-  handleNameChange = (val) => {
+  handleNameChange(val) {
     const name = val.target.value;
 
     this.setState({ touched: true });
@@ -27,14 +34,20 @@ export default class extends Component {
     } else {
       this.setState({ name });
     }
-  };
+  }
 
-  renderGreetingWidget = () => (!this.state.touched ? null :
-    <div>
-      <hr />
-      <p>Здравствуйте, {this.state.name}!</p>
-    </div>
-  );
+  renderGreetingWidget() {
+    if (!this.state.touched) {
+      return null;
+    }
+
+    return (
+      <div>
+        <hr />
+        <p>Здравствуйте, {this.state.name}!</p>
+      </div>
+    );
+  }
 
   render() {
     return (
@@ -49,3 +62,8 @@ export default class extends Component {
     );
   }
 }
+
+HelloWorldPage.propTypes = propTypes;
+HelloWorldPage.defaultProps = defaultProps;
+
+export default HelloWorldPage;
