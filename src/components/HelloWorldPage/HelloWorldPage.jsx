@@ -1,6 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 
-import './App.css';
+import './HelloWorldPage.css';
 
 export default class extends Component {
   static propTypes = {
