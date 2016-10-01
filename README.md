@@ -1,0 +1,44 @@
+# React isomorphic / universal front-end application with authentication tutorial for HabraHabr
+Эта ветка соответствует состоянию приложения из [второй части статьи для Хабрахабра](https://habrahabr.ru/post/310284)
+
+Состояние приложения из [первой части](https://habrahabr.ru/post/309958/) можно найти в [ветке v1](https://github.com/yury-dymov/habr-app/tree/v1)
+Состояние приложения из [третьей части](https://habrahabr.ru/post/310952/) можно найти в [ветке v3](https://github.com/yury-dymov/habr-app/tree/v3)
+
+# React Tutorial
+Я написал цикл из трех статей для [habrahabr](https://habrahabr.ru), который поможет новчикам собрать стек React-приложения с нуля, добавляя шаг за шагом различные библиотеки и компоненты с полным $
+
+## Ключевые слова
+* react
+* redux
+* isomorphic / universal web-application
+* server-side rendering
+* authentication
+* omniauth
+* API
+* node.js
+
+# Содержание
+## [Первая часть](https://habrahabr.ru/post/309958/)
+* Создаем node.js приложение
+* Добавляем express и пишем заготовку для серверной части изоморфного приложения
+* Добавляем и настраиваем babel
+* Добавляем webpack, пишем конфиг сборки клиентского JavaScript
+* Добавляем eslint и определяем требования к исходному коду
+* Добавляем react и react-dom
+* Создаем компонент "Hello World"
+
+## [Вторая часть](https://habrahabr.ru/post/309958/)
+* Добавляем react-bootstrap и создаем общий layout приложения
+* Создаем несколько страниц
+* Добавляем react-router и настраиваем навигацию для сайта
+* Добавляем redux и учимся работать с состоянием
+
+## [Третья часть](https://habrahabr.ru/post/310284/)
+* Добавляем redux-devtools
+* Добавляем redux-oauth и реализуем аутификацию
+* Реализуем взаимодействие с внешними источниками данных
+* Добавляем запросы к API в server-side rendering
+
+# Copyright
+Yury Dymov, 2016.
+
