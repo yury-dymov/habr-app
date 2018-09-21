@@ -4,9 +4,9 @@
   "description": "Simple universal / isomorphic React application for habrahabr.ru",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV='production' webpack -p",
+    "build": "cross-env NODE_ENV='production' webpack -p",
     "webpack-devserver": "webpack-dev-server --debug --hot --devtool eval-source-map --output-pathinfo --watch --colors --inline --content-base public --port 8050 --host 0.0.0.0",
-    "nodemon": "NODE_PATH=./src nodemon server.js"
+    "nodemon": "cross-env NODE_PATH=./src nodemon ./server.js"
   },
   "repository": {
     "type": "git",
@@ -52,6 +52,7 @@
     "babel-eslint": "^6.1.2",
     "babel-loader": "^6.2.5",
     "clean-webpack-plugin": "^0.1.10",
+    "cross-env": "^5.2.0",
     "css-loader": "^0.24.0",
     "eslint": "^3.3.1",
     "eslint-loader": "^1.5.0",
